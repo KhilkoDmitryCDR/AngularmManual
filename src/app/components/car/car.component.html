@@ -7,16 +7,37 @@
 
     </mark>
     {{name}}
-    <small>{{model}}</small>
-    <div class="alerta">Caracteristicas:
+    <small>{{model}}</small></h4>
+    <div class="alert">Caracteristicas:
         <ul>Rapidez:<strong>{{speed}}</strong> km</ul>
-        <ul>Color:<strong>{{speed}}</strong> km</ul>
-        <ul>Color del salon:<strong>{{speed}}</strong> km</ul>
-        <ul>Color de las ruedas:<strong>{{speed}}</strong> km</ul>
-
-        
+        <ul>Color:<strong> {{colors.car}}</strong> </ul>
+        <ul>Color del salon:<strong> {{colors.salon}}</strong> </ul>
+        <ul>Color de las ruedas:<strong> {{colors.wheels}}</strong> </ul>
     </div>
-</h4>
+ <h5>Vehiculo con siguientes opcionales : </h5>
+ <form action="" (submit)="addOpt(option.value)">
+     <div class="form-group">
+         <label for="option">
+             Mas opcionales
+         </label>
+         <input type="text" id="option" placeholder="Enter" class="form-control" #option>
+         <br>
+         <button type="submit" class="btn-outline-succes">
+             Añadir
+         </button>
+
+     </div>
+ </form>
+ <div class="alert">
+     <ul>
+         <li *ngFor="let opt of options; let i=index ">{{i+1}} - {{opt}} <button class="btn btn-warning btn-sm" (click)="deleteOpt(opt)">X</button></li>
+     </ul>
+ </div>
+ <h5>Elije tu coche </h5>
+ <button class="btn btn-danger" (click)="carSelect('bmw')">BMW</button>
+ <button class="btn btn-succes" (click)="carSelect('mers')">Mercedes</button>
+ <button class="btn btn-info" (click)="carSelect('audi')">Audi</button>
+
 </div>
 
 
