@@ -8,5 +8,19 @@ if (environment.production) {
   enableProdMode();
 }
 
+interface IBar {
+	baz: string
+}
+
+var foo: {
+	[property: string]: IBar
+}
+
+foo = {
+	foobar: {
+		baz: 'Hi there!'
+	}	
+};
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
