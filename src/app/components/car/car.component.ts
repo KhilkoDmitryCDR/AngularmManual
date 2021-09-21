@@ -13,6 +13,7 @@ export class CarComponent implements OnInit {
   colors!:Colors;
   options!:string[];
   test:any;
+  isEdit:boolean=false;
   
 
 
@@ -28,8 +29,12 @@ export class CarComponent implements OnInit {
       wheels:'Silver'
 
     };
-    this.options= ["ABS","Auto-parcking"];
+    this.options= ["ABS","masaje","moitores","Auto-parcking"];
     
+  }
+
+  showEdit(){
+    this.isEdit=!this.isEdit;
   }
 
   addOpt(option:string){
