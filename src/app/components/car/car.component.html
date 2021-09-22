@@ -46,7 +46,7 @@
  </form>
  <div class="alert">
      <ul>
-         <li *ngFor="let opt of options; let i=index ">{{i+1}} - {{opt}} <button class="btn btn-warning btn-xs" (click)="deleteOpt(opt)">X</button></li>
+         <li *ngFor="let opt of options; let i=index; let odd=odd; let even=even;" [ngClass]="{odd:odd, even:even}">{{i+1}} - {{opt}} <button class="btn btn-warning btn-xs" (click)="deleteOpt(opt)">X</button></li>
      </ul>
  </div>
  <h5>Elije tu coche </h5>

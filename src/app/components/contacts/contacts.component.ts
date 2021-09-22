@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsComponent implements OnInit {
 
+  loggedIn=false;
+
   constructor() { }
 
   ngOnInit(): void {
