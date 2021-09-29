@@ -48,13 +48,19 @@
     <p class="lead">This is a simple Hello World.</p>
     <hr class="my-4">
     <p>You must continue learning.</p>
+    <div class="main-form">
+      <p>Search your profile <a href="github.com">github.com</a></p>
+      User name: <input [(ngModel)]="userName" type="text">
+      <button (click)="search()">Search</button>
+      <div *ngIf="response">
+        <img alt="" src="{{response.avatar_url}}">
+        <p>Name: {{response.login}}</p>
+        <p>Repositories: {{response.public_repos}}</p>
+        <p>Bio: {{response.bio}}</p>
+      </div>
+    </div>
+
     <a class="btn btn-warning btn-lg" href="#" role="button">Let's go!</a>
   </div>
-  
-  
- 
+</div>
 
-  
-
-
- 

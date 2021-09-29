@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataHandlerService} from "../../service/data-handler.service";
 
 @Component({
   selector: 'app-neumaticos',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NeumaticosComponent implements OnInit {
 
-  constructor() { }
+  constructor(svc: DataHandlerService) {
+    svc.consoleText('Hello world');
+  }
 
   ngOnInit(): void {
   }
