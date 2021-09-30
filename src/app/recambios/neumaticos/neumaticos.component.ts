@@ -1,5 +1,6 @@
 import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 import {DataHandlerService} from "../../service/data-handler.service";
+import {MercanciaService} from "../mercancia.service";
 
 
 @Component({
@@ -17,11 +18,12 @@ export class NeumaticosComponent implements OnInit {
     this.newItemEvent.emit(value);
   }
 
-  constructor(svc: DataHandlerService) {
+  constructor(svc: DataHandlerService, public mercanciaService: MercanciaService) {
     svc.consoleText('Hello world');
   }
 
   ngOnInit(): void {
+    console.log(this.mercanciaService);
   }
 
 
