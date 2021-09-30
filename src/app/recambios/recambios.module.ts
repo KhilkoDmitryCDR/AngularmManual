@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NeumaticosComponent } from './neumaticos/neumaticos.component';
+import {NeumaticosComponent} from './neumaticos/neumaticos.component';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -9,7 +10,8 @@ import { NeumaticosComponent } from './neumaticos/neumaticos.component';
     NeumaticosComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     NeumaticosComponent

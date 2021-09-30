@@ -1,1 +1,6 @@
 <h5>modulo creado <strong>works!</strong></h5>
+<p>today is : {{item}}</p>
+<label for="item-input">Add an item:</label>
+<input #newItem id="item-input" type="text">
+<button (click)="addNewItem(newItem.value)">Add to parent's list</button>
+

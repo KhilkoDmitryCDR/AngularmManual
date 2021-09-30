@@ -57,7 +57,17 @@
         <p>Name: {{response.login}}</p>
         <p>Repositories: {{response.public_repos}}</p>
         <p>Bio: {{response.bio}}</p>
+
       </div>
+
+    </div>
+    <app-neumaticos (newItemEvent)="addItem($event)" [item]="currentItem">
+
+    </app-neumaticos>
+    <div>
+      <ul>
+        <li *ngFor="let item of items">{{item}}</li>
+      </ul>
     </div>
 
     <a class="btn btn-warning btn-lg" href="#" role="button">Let's go!</a>

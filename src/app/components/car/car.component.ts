@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-car',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarComponent implements OnInit {
 
+
   name!: string;
   speed!:number;
   model!:string;
@@ -14,7 +16,6 @@ export class CarComponent implements OnInit {
   options!:string[];
   test:any;
   isEdit:boolean=false;
-  
 
 
   constructor() { }
@@ -30,7 +31,7 @@ export class CarComponent implements OnInit {
 
     };
     this.options= ["ABS","masaje","moitores","Auto-parcking"];
-    
+
   }
 
   showEdit(){
@@ -47,7 +48,7 @@ export class CarComponent implements OnInit {
       if(this.options[i]==option)
         this.options.splice(i,1);
         break;
-      
+
     }
   }
 
@@ -63,8 +64,8 @@ export class CarComponent implements OnInit {
 
     };
     this.options= ["ABS","Auto-parcking"];
-   
-  }else if(carName=='audi'){
+
+    }else if(carName=='audi'){
     this.name="Audi";
     this.speed=235;
     this.model="RS8";
@@ -75,8 +76,8 @@ export class CarComponent implements OnInit {
 
     };
     this.options= ["ABS","Auto-parcking"];
-   
-  }else{
+
+    }else{
     this.name="Mercedes";
     this.speed=180;
     this.model="C180";
@@ -87,8 +88,8 @@ export class CarComponent implements OnInit {
 
     };
     this.options= ["ABS","Auto-parcking"];
-    
-  }
+
+    }
 }
 
 }
